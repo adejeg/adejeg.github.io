@@ -1,65 +1,434 @@
 body{
-    background: #f8f9fa !important;
-    padding-bottom: 20px;
+    font-size: 100%;
+    font-weight: lighter;
 }
 h1{
     font-size: 4em;
     font-weight: lighter;
     color: #28a745;
 }
+
 h6, i{
     color:#ccc;
 }
-.row{
+
+.sliderow{
     padding: 0px;
 }
 
 .card{
-    box-shadow: #ccc 0px 5px 5px;
+    box-shadow: #ccc 0px 5px 20px;
     border:0px;
 }
-.card-header p{
-    margin-bottom: 0px;
-}
-.card-body{
-    padding-left:0px;
-    padding-right:0px;
-}
-.card-header{
-    background: #fff;
-    border: 0px;
-}
-.card-content{
-    padding: 15px;
-}
-.top-content{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 0px 5px;
-    padding-left:5px;
-    padding-right:5px;
-}
 
-.bottom-content{
-    padding: 15px 0px;
-}
-.bottom-card-content p{
-    margin-bottom: 0px;
-}
 .card-body{
     padding: 0px;
 }
-.border-element{
-    border-right: #ccc 1px solid;
-    
+
+.navbar{
+    background: #28a745 !important;
 }
+.navbar a{
+    color: #f1f1f1 !important;
+}
+.navbar-brand{
+    border: 1px solid #f1f1f1;
+    padding: 5px;
+    border-radius: 5px;
+}
+.project-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-header{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay{
+    opacity: 0.7;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #28a745;
+    height: 100%;
+    text-align: center;
+}
+
+.portfolio-header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.portfolio-header-text h1{
+    color: #f1f1f1;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+.top-section{
+    background: #28a745;
+    padding: 5em 0px;
+    font-weight: bolder;
+    color: #f1f1f1;
+    margin-bottom: 5em;
+}
+
+.bottom-section{
+    background: #28a745;
+    padding: 5em 0px;
+    font-weight: bolder;
+    color: #f1f1f1;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.project-overlay{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #28a745;
+    height: 100%;
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.project-name{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #28a745;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project-name:hover a{
+    text-decoration: none;
+}
+
+.project-name a{
+    color: #f8f9fa;
+}
+.project-container:hover .project-overlay {
+    opacity: 0.5;
+  }
+
+.project-container:hover .project-name {
+    opacity: 1;
+  }
+.device-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.jumbotron{
+    background: #28a745;
+    color: #f1f1f1;
+    text-align: center;
+    border-radius: 0px;
+}
+.jumbotron h1{
+    color: #f8f9fa;
+}
+.smartphone {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: auto;
+    border: 16px #A4C639 solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+
+.smart-phone-text{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-60%, -50%);   
+}
+  /* The horizontal line on the top of the device */
+.smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #28a745;
+    border-radius: 10px;
+}
+  
+  /* The circle on the bottom of the device */
+.smartphone:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #28a745;
+    border-radius: 50%;
+}
+  
+  /* The screen (or content) of the device */
+.smartphone .content {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+  /* The device with borders */
+.tablet {
+    position: relative;
+    width: 800px;
+    height: 1024px;
+    margin: auto;
+    border: 16px #A4C639 solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+
+.tablet-phone-text{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-30%, -50%);
+    text-align: right;
+}
+
+/* The horizontal line on the top of the device */
+.tablet:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #28a745;
+    border-radius: 10px;
+}
+/* The circle on the bottom of the device */
+.tablet:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #28a745;
+    border-radius: 50%;
+}
+  
+  /* The screen (or content) of the device */
+  .tablet .content {
+    width: 768px;
+    height: 100%;
+    background: white;
+    margin: -1px;
+}
+.alert-message{
+    display: none;
+}
+@media screen and (max-width:1200px){
+    .tablet-phone-text, .smart-phone-text{
+        display: none
+    }
+    .alert-message{
+        display: block;
+    }
+}
+
+/* The laptop with borders */
+.laptop {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(.9) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+    transform: scale(.9) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+    left: 50%;
+    position: relative;
+    width: 1366px;
+    height: 700px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #A4C639;
+    border-width: 24px 24px 80px;
+    background-color: #A4C639;
+  
+}
+  
+  /* The keyboard of the laptop */
+.laptop:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1550px;
+    height: 60px;
+    margin: 80px 0 0 -110px;
+    background: #A4C639;
+    border-radius: 6px;
+    border: 1px solid #fff;
+  }
+  
+  /* The top of the keyboard */
+.laptop:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    bottom: -110px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    background: #f1f1f1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* The screen (or content) of the device */
+.laptop .content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .sliderow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 11.11111111111111%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
 @media screen and (max-width:992px){
     .card{
         margin-top: 10px;
     }
 }
-@media screen and (max-width: 575px){
-    .border-element{
-        border-right: 0px;
+
+@media screen and (max-width:600px){
+    .portfolio-header-text{
+        font-size: 0.5em;
     }
+}
+
+footer{
+    background: #222;
+    padding: 5em 0px 0px 1em;
+    margin-top: 5em;
+    color: #f1f1f1;   
 }
